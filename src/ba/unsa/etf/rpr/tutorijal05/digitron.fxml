@@ -8,6 +8,7 @@
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 
+<?import javafx.scene.control.Label?>
 <GridPane alignment="CENTER" hgap="5.0" vgap="5.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ba.unsa.etf.rpr.tutorijal05.Controller">
     <stylesheets>
         <URL value="@style.css" />
@@ -29,24 +30,24 @@
       <RowConstraints valignment="CENTER" vgrow="ALWAYS" />
    </rowConstraints>
    <children>
-      <Button maxWidth="Infinity" mnemonicParsing="false" text="\%" GridPane.rowIndex="1" />
-      <Button maxWidth="Infinity" mnemonicParsing="false" text="/" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-      <Button maxWidth="Infinity" mnemonicParsing="false" text="x" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-      <Button maxWidth="Infinity" mnemonicParsing="false" text="-" GridPane.columnIndex="3" GridPane.rowIndex="1" />
-      <Button maxWidth="Infinity" mnemonicParsing="false" text="4" GridPane.rowIndex="3" />
-      <Button maxWidth="Infinity" mnemonicParsing="false" text="8" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-      <Button maxWidth="Infinity" mnemonicParsing="false" text="7" GridPane.rowIndex="2" />
-      <Button maxWidth="Infinity" mnemonicParsing="false" text="9" GridPane.columnIndex="2" GridPane.rowIndex="2" />
-      <Button maxWidth="Infinity" mnemonicParsing="false" text="6" GridPane.columnIndex="2" GridPane.rowIndex="3" />
-      <Button maxWidth="Infinity" mnemonicParsing="false" text="5" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-      <Button maxWidth="Infinity" mnemonicParsing="false" text="0" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="5" />
-      <Button maxWidth="Infinity" mnemonicParsing="false" text="2" GridPane.columnIndex="1" GridPane.rowIndex="4" />
-      <Button maxWidth="Infinity" mnemonicParsing="false" text="." GridPane.columnIndex="2" GridPane.rowIndex="5" />
-      <Button maxWidth="Infinity" mnemonicParsing="false" text="1" GridPane.rowIndex="4" />
-      <Button maxWidth="Infinity" mnemonicParsing="false" text="3" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+      <Button fx:id="precentBtn" maxWidth="Infinity" mnemonicParsing="false" text="\%" GridPane.rowIndex="1" />
+      <Button fx:id="dijeljenjeBtn" maxWidth="Infinity" mnemonicParsing="false" text="/" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+      <Button fx:id="mnozenjeBtn" maxWidth="Infinity" onAction="#btnMnozenje" mnemonicParsing="false" text="x" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+      <Button fx:id="oduzimanjeBtn" maxWidth="Infinity" onAction="#minus" mnemonicParsing="false" text="-" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+      <Button fx:id="btn4" maxWidth="Infinity" onAction="#btn44" mnemonicParsing="false" text="4" GridPane.rowIndex="3" />
+      <Button fx:id="btn8" maxWidth="Infinity" onAction="#btn88" mnemonicParsing="false" text="8" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+      <Button fx:id="btn7" maxWidth="Infinity" onAction="#btn77" mnemonicParsing="false" text="7" GridPane.rowIndex="2" />
+      <Button fx:id="btn9" maxWidth="Infinity" onAction="#btn99" mnemonicParsing="false" text="9" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+      <Button fx:id="btn6" maxWidth="Infinity" onAction="#btn66" mnemonicParsing="false" text="6" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+      <Button fx:id="btn5" maxWidth="Infinity" onAction="#btn55" mnemonicParsing="false" text="5" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+      <Button fx:id="btn0" onAction="#btn00" maxWidth="Infinity" mnemonicParsing="false" text="0" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="5" />
+      <Button fx:id="btn2" maxWidth="Infinity" mnemonicParsing="false" text="2" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+      <Button fx:id="tacka" maxWidth="Infinity" mnemonicParsing="false" text="." GridPane.columnIndex="2" GridPane.rowIndex="5" />
+      <Button fx:id="btn1" maxWidth="Infinity" mnemonicParsing="false" text="1" GridPane.rowIndex="4" />
+      <Button fx:id="btn3" maxWidth="Infinity" mnemonicParsing="false" text="3" GridPane.columnIndex="2" GridPane.rowIndex="4" />
       <Button fx:id="addBtn" maxHeight="Infinity" maxWidth="Infinity" mnemonicParsing="false" text="+" GridPane.columnIndex="3" GridPane.rowIndex="2" GridPane.rowSpan="2" />
-      <Button fx:id="equBtn" maxHeight="Infinity" maxWidth="Infinity" mnemonicParsing="false" text="=" GridPane.columnIndex="3" GridPane.rowIndex="4" GridPane.rowSpan="2" />
-      <TextField fx:id="inputField" maxWidth="Infinity" GridPane.columnSpan="4" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" />
+      <Button onAction="#jednako" fx:id="equBtn" maxHeight="Infinity" maxWidth="Infinity" mnemonicParsing="false" text="=" GridPane.columnIndex="3" GridPane.rowIndex="4" GridPane.rowSpan="2" />
+      <Label fx:id="inputField" maxWidth="Infinity" GridPane.columnSpan="4" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" text="${controller.displej}" />
    </children>
    <padding>
       <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
