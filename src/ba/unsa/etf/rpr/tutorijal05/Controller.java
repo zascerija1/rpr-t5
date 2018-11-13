@@ -2,7 +2,6 @@ package ba.unsa.etf.rpr.tutorijal05;
 
 import javafx.beans.property.SimpleStringProperty;
 import javafx.event.ActionEvent;
-import javafx.scene.control.Button;
 
 public class Controller {
 
@@ -75,15 +74,16 @@ if(displej.get()=="0"|| operacija.get()=="=") displej.set("");
     public void btn33(ActionEvent actionEvent) {
         if(displej.get()=="0"|| operacija.get()=="=") displej.set("");
         displej.set(displej.get()+"3");
+
     }
-
-
-
-
+    
         public void minus(ActionEvent actionEvent) {
+        if(displej.get()=="0" || (operacija.get()!="" && operacija.get()!="=")) displej.set("-");
+       else{
         prvi_operand.set(displej.get());
+            System.out.println(prvi_operand.get());
         displej.set("");
-        operacija.set("-");
+        operacija.set("-");}
 
     }
 
@@ -129,6 +129,7 @@ if(displej.get()=="0"|| operacija.get()=="=") displej.set("");
 
         }
         operacija.set("=");
+       // prvi_operand.set("");
 
 
 
