@@ -106,4 +106,82 @@ class MainTest {
         robot.clickOn("#btn0");
         assertEquals("10", display.getText());
     }
+
+    @Test
+    public void minus5plus6 (FxRobot robot) {
+        display = robot.lookup("#display").queryAs(Label.class);
+        robot.clickOn("#oduzimanjeBtn");
+        robot.clickOn("#btn5");
+        robot.clickOn("#plusBtn");
+        robot.clickOn("#btn6");
+        robot.clickOn("#equalsBtn");
+        assertEquals("1.0", display.getText());
+    }
+    @Test
+    public void minus55minus13 (FxRobot robot) {
+        display = robot.lookup("#display").queryAs(Label.class);
+        robot.clickOn("#oduzimanjeBtn");
+        robot.clickOn("#btn5");
+        robot.clickOn("#btn5");
+        robot.clickOn("#oduzimanjeBtn");
+        robot.clickOn("#btn1");
+        robot.clickOn("#btn3");
+        robot.clickOn("#equalsBtn");
+        assertEquals("-68.0", display.getText());
+    }
+
+    @Test
+    public void  minus3minusminus6 (FxRobot robot) {
+        display = robot.lookup("#display").queryAs(Label.class);
+        robot.clickOn("#oduzimanjeBtn");
+        robot.clickOn("#btn3");
+        robot.clickOn("#oduzimanjeBtn");
+        robot.clickOn("#oduzimanjeBtn");
+        robot.clickOn("#btn6");
+
+        robot.clickOn("#equalsBtn");
+        assertEquals("3.0", display.getText());
+    }
+    @Test
+    public void  negativeMultiplynegative (FxRobot robot) {
+        display = robot.lookup("#display").queryAs(Label.class);
+        robot.clickOn("#oduzimanjeBtn");
+        robot.clickOn("#btn4");
+        robot.clickOn("#btn5");
+        robot.clickOn("#mnozenjeBtn");
+        robot.clickOn("#oduzimanjeBtn");
+        robot.clickOn("#btn3");
+        robot.clickOn("#equalsBtn");
+        assertEquals("135.0", display.getText());
+    }
+
+    @Test
+    public void  modTest(FxRobot robot) {
+        display = robot.lookup("#display").queryAs(Label.class);
+        robot.clickOn("#btn2");
+        robot.clickOn("#btn5");
+        robot.clickOn("#precentBtn");
+        robot.clickOn("#btn3");
+        robot.clickOn("#equalsBtn");
+        assertEquals("1.0", display.getText());
+    }
+
+    @Test
+    public void  divisionMinus(FxRobot robot) {
+        display = robot.lookup("#display").queryAs(Label.class);
+        robot.clickOn("#btn2");
+        robot.clickOn("#btn4");
+        robot.clickOn("#btn3");
+        robot.clickOn("#dijeljenjeBtn");
+        robot.clickOn("#oduzimanjeBtn");
+        robot.clickOn("#btn3");
+        robot.clickOn("#equalsBtn");
+        assertEquals("-81.0", display.getText());
+    }
+
+
+
+
+
+
 }
